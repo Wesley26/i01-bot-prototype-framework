@@ -1,0 +1,34 @@
+{
+    "token": "Bot Token Goes Here",
+    "prefix": ".",
+
+    "helpMenu": ["**.help :** Displays the help menu, the menu you are currently viewing.\n",
+      "**.hi :** Gives you my introduction message.\n",
+      "**.mcc :** Type this command for more detailed information on i01 after the release of the Master Chief Collection for the PC.\n",
+      "**.beanmeme :** Display a Bean Meme!\n",
+      "**.concept :** Display concept art works from the game.\n",
+      "**.music :** Display link to i01 music playlist.\n",
+      "**.poke :** I wonder what this does?"],
+    
+    "responseMenu": ["Hello there!",
+      "Sup!",
+      "I have been summoned.",
+      "oof!",
+      "Hah! I didn't even feel that one.",
+      "Hmmm... must be :b: awke",
+      "Did you feel something just now?",
+      "Soon :tm:",
+      ""],
+    
+    "blacklistWords": [
+       "insert",
+       "words",
+       "for",
+       "this",
+       "discord",
+       "bot",
+       "to",
+       "blacklist",
+       "here"
+    ]
+}
