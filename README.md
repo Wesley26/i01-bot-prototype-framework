@@ -1,11 +1,10 @@
-# i01-bot-prototype-framework
+# i01 bot
 
 i01 bot created by Wesley Dzitzer
 
-Prototype build submitted to the web developers of the Halo Fan Game Installation 01, Soon Studios Team. This repo is for portfolio showcasing only. To see the bot in action, visit the official i01 website, navigate to community, then discord to join the official Installation 01 Halo Fan Game discord server: https://installation01.org/
+Prototype build submitted to the web developers of the Halo Fan Game Installation 01, Soon Studios Team. This repo is for portfolio showcasing only. As of January 11, 2021, the discord bot was closed by Soon Studios Team as the game developers moved on to other interests.
 
 # Documentation:
-Documentation of this prototype build:
 
 - i01Bot.js:
 Bot's index file - It makes the bot's bones work ;)

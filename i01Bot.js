@@ -2,30 +2,35 @@
 index file of this bot
 
 i01 Bot created by Wesley Dzitzer (Discord screen name ProBoz - John the Chief).
+
 Prototype build submitted to the developers of the Halo Fan Game Installation 01, Soon Studios Team.
 
-There are files that are ignored called Pics/i01ConceptArt, Pics/i01Memes, and a stand alone i01MCCInfo image.
+There are files that are ignored called Pics/i01ConceptArt, Pics/i01Memes, and a stand alone i01MCCInfo, bot profile pic image.
 
 If files need to be installed, while you are cd'ed in DiscordBot folder, run:
 'npm install discord.js' refer to https://discord.js.org/#/docs/main/stable/general/welcome
+
 */
 
 //Create variables Discord, the logger (bot token) which is botconfig.json, and initialize the bot module instance itself
 
 const discord = require("discord.js");
 const {
-        token,
         prefix, 
         helpMenu, 
         responseMenu, 
         blacklistWords
-      } = require("./botconfig.json"); //check botconfig.json for token, prefix value, and lists.
+      } = require("./botconfig.json"); //check botconfig.json for prefix value, and lists.
+
+const {
+        token
+    } = require("./bottoken.json"); //check bottoken.json for the bot's token. Keep file untracked.
 
 const cmdMaster = require("./prefixLibrary.js"); //import prefix command strings from prefixLibrary.js
 
 const client = new discord.Client();
 
-client.login(token); //is the token from botconfig.json
+client.login(token); //is the token from bottoken.json
 
 var badWords = []; //intialize badWords lookup table array
 var theHelpList = []; //initialize the help menu
@@ -123,12 +128,14 @@ client.on("message", async message => {
         /*
         Check to ensure the bot checks for profanity and soon in public channels only, parentID is category.
         bot testing public category ID = 680647584112443413
+        bot testing voice channels category ID = 680647584112443414
 
         i01 official installation01 category ID = 360679521650868224
         i01 official general category ID = 360679166242455553
         i01 official voice category ID = 360597366144761859
         */
        if ((message.channel.parentID === "680647584112443413"
+       || message.channel.parentID === "680647584112443414"
        || message.channel.parentID === "360679521650868224"
        || message.channel.parentID === "360679166242455553"
        || message.channel.parentID === "360597366144761859")) {
@@ -140,9 +147,9 @@ client.on("message", async message => {
         return;
     };
 
-    //680662165186805839 = snowflake id of the #bot-commands in ProBoz i01 Bot Test (guild) server
+    //798027124354580481 = snowflake id of the #bot-commands in ProBoz i01 Bot Test (guild) server
     //530585406182391838 = snowflake id of the #bot-commands in official i01 discord (guild) server
-    if (message.channel.id === "680662165186805839"
+    if (message.channel.id === "798027124354580481"
        || message.channel.id === "530585406182391838")  { //check to ensure that the prefix commands are only used in #bot-commands
         
         var cmd = { //cmd is object function library, check prefixLibrary.js for full list

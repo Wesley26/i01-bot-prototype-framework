@@ -1,4 +1,9 @@
-node_modules
-Pics
+node_modules/
+
+# Ignore the BotToken JSON file
+**/bottoken.json
+
+# Ignore Pics folder
+Pics/
 Pics/i01ConceptArt
 Pics/i01Memes

@@ -1,5 +1,4 @@
 {
-    "token": "Bot Token Goes Here",
     "prefix": ".",
 
     "helpMenu": ["**.help :** Displays the help menu, the menu you are currently viewing.\n",

@@ -3,8 +3,12 @@
     "version": "1.0.1",
     "description": "Experimental bot you can chat with for the official Installation 01 discord server.",
     "main": "i01Bot.js",
-    "author": "WesleyDzitzer",
+    "author": "ProBoz#8245",
+    "scripts": {
+        "start": "npm update",
+        "poststart": "node i01Bot.js"
+    },
     "dependencies": {
-        "discord.js": "^12.0.1"
+        "discord.js": "^12.5.1"
     }
 }
